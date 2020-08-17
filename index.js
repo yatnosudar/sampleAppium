@@ -18,7 +18,7 @@ async function main() {
     const client = await wdio.remote(opts);
     await client.setOrientation("LANDSCAPE");
     
-    let el1 = client.$("~Accessibility");
+    var el1 = client.$("~Accessibility");
     (await el1).click();
     const field = await client.$('//android.widget.TextView[@content-desc="Accessibility Node Querying"]');
     const value = await field.getText();
